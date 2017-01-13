@@ -1,0 +1,23 @@
+Category
+  name
+  color
+
+Article
+  title
+  body
+
+  HasCategory
+    artice
+    category
+
+  Diseño - Category
+
+  Programación - Category
+
+  HasCategory
+    Cómo programar con Rails
+    Diseño
+
+  HasCategory
+    Cómo programar en Rails
+    Programación

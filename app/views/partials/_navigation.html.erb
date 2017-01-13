@@ -1,0 +1,30 @@
+  <header>
+    <nav class="be-red white large-padding">
+      <ul class="no-list row center-xs around-xs middle-xs">
+        <li type="none" class="col-md">
+          <h1 class="no-margin" id="logo"><%= link_to "BLog Web", root_path %></hi>
+              </li>
+              <li type="none" class="col-md">
+                <%= link_to "Artículos", articles_path %>
+        </li>
+      </li>
+      <% @categories.each do |category| %>
+      <li type="none" class="col-md">
+            <%= link_to category.name,category %>
+          </li>
+      <%end%>
+                <% if usser_signed_in? %>
+        <li type="none" class="col-md">
+          <%= link_to "Cerrar sesión", destroy_usser_session_path, method: :delete %>
+        </li>
+        <%else%>
+        <li type="none" class="col-md">
+          <%= link_to "Iniciar sesión", new_usser_session_path %>
+        </li>
+        <li type="none" class="col-md">
+          <%= link_to "Crear cuenta", new_usser_registration_path %>
+        </li>
+        <%end%>
+      </ul>
+    </nav>
+  </header>
